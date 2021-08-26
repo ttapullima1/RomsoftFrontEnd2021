@@ -73,6 +73,10 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.Core
 
         //atenciones
         public static int f_idAtencion { get; set; }
+        public static string f_tipo_pendiente { get; set; }
+        public static string f_tipo_facturacion { get; set; }
+        public static string f_idioma { get; set; }
+        
 
         // Siteds Req
         public static string sit_origenConsulta { get; set; }  //origen  de ventana consulta atencion/HistoriaClinica

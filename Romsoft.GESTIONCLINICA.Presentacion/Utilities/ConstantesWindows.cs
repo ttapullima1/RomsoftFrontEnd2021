@@ -132,6 +132,8 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.Utilities
         public static string WS_ADM_DOCUMENTO_IDENTIDAD_GetAllActives = ConfigurationManager.AppSettings["WS_ADM_DOCUMENTO_IDENTIDAD_GetAllActives"];
         //    <!--Especialidad-->
         public static string WS_ADM_ESPECIALIDAD_GetAllActives = ConfigurationManager.AppSettings["WS_ADM_ESPECIALIDAD_GetAllActives"];
+        public static string WS_ADM_ESPECIALIDA_PROFESIONAL_GetById = ConfigurationManager.AppSettings["WS_ADM_ESPECIALIDA_PROFESIONAL_GetById"];
+
         //    <!--Tipo Profesional-->
         public static string WS_ADM_TIPO_PROFESIONAL_GetAllActives = ConfigurationManager.AppSettings["WS_ADM_TIPO_PROFESIONAL_GetAllActives"];
         //    <!--Condicion Profesional-->
@@ -153,6 +155,8 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.Utilities
         //Atenciones
         public static string WS_ADM_ATENCION_GetAtencionAllFilters = ConfigurationManager.AppSettings["WS_ADM_ATENCION_GetAtencionAllFilters"];
         public static string WS_ADM_ATENCION_Add = ConfigurationManager.AppSettings["WS_ADM_ATENCION_Add"];
+        public static string WS_ADM_ATENCION_GetById = ConfigurationManager.AppSettings["WS_ADM_ATENCION_GetById"];
+        public static string WS_ADM_ATENCION_Update = ConfigurationManager.AppSettings["WS_ADM_ATENCION_Update"];
         //Para atenciones
         public static string WS_ADM_TIPO_PACIENTE_GetAllActives = ConfigurationManager.AppSettings["WS_ADM_TIPO_PACIENTE_GetAllActives"];
         public static string WS_ADM_TIPO_ATENCION_GetAllActives = ConfigurationManager.AppSettings["WS_ADM_TIPO_ATENCION_GetAllActives"];
@@ -170,7 +174,13 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.Utilities
         //Siteds
         public static string WS_ADM_DOCUMENTO_AUTORIZACION_GetAllFilters = ConfigurationManager.AppSettings["WS_ADM_DOCUMENTO_AUTORIZACION_GetAllFilters"];
         public static string WS_ADM_DOCUMENTO_AUTORIZACION_GetAddAtencionAll = ConfigurationManager.AppSettings["WS_ADM_DOCUMENTO_AUTORIZACION_GetAddAtencionAll"];
+        //
+        public static string WS_ADM_ATENCION_Pending = ConfigurationManager.AppSettings["WS_ADM_ATENCION_Pending"];
+        public static string WS_FAC_DOCUMENTO_PAGO_GetAllFilters = ConfigurationManager.AppSettings["WS_FAC_DOCUMENTO_PAGO_GetAllFilters"];
+        public static string WS_ADM_FORMA_PAGO_GetAllFilters = ConfigurationManager.AppSettings["WS_ADM_FORMA_PAGO_GetAllFilters"];
+        public static string WS_FAC_COMPROBANTE_Add = ConfigurationManager.AppSettings["WS_FAC_COMPROBANTE_Add"];
 
+        
         #endregion
 
         #region KeyString

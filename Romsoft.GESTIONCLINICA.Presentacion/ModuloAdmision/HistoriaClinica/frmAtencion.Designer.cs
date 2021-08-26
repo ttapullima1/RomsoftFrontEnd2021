@@ -59,12 +59,13 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.label3 = new System.Windows.Forms.Label();
             this.LblPaciente = new System.Windows.Forms.Label();
             this.LblUbigeoNacimiento = new System.Windows.Forms.Label();
+            this.gbMensjaje = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.GrpConsultorio = new System.Windows.Forms.GroupBox();
             this.label54 = new System.Windows.Forms.Label();
             this.DtFechaVigencia = new System.Windows.Forms.DateTimePicker();
@@ -76,11 +77,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.label45 = new System.Windows.Forms.Label();
             this.DtAtencion = new System.Windows.Forms.DateTimePicker();
             this.BtnFacturar = new System.Windows.Forms.Button();
-            this.BtnHojaRuta = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.gbMensjaje = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TxtObservacionGeneral = new System.Windows.Forms.TextBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.TxtNumeroPlaca = new System.Windows.Forms.TextBox();
@@ -88,23 +85,6 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.ChkDejaCarta = new System.Windows.Forms.CheckBox();
             this.ChkDejaDenuncia = new System.Windows.Forms.CheckBox();
             this.TxtObservacionAccidente = new System.Windows.Forms.TextBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.label53 = new System.Windows.Forms.Label();
-            this.CboTipoHospitalizacion = new System.Windows.Forms.ComboBox();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.CboHabitacionAlta = new System.Windows.Forms.ComboBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.TxtHoraAlta = new System.Windows.Forms.TextBox();
-            this.DtFechaIngreso = new System.Windows.Forms.DateTimePicker();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.CboMotivoAlta = new System.Windows.Forms.ComboBox();
-            this.TxtHoraIngreso = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.DtFechaAlta = new System.Windows.Forms.DateTimePicker();
-            this.label31 = new System.Windows.Forms.Label();
-            this.CboHabitacionIngreso = new System.Windows.Forms.ComboBox();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.GrpDiagnostico = new System.Windows.Forms.GroupBox();
             this.txtDiagnostico = new System.Windows.Forms.TextBox();
@@ -115,6 +95,9 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.CboTipoDiagnostico = new System.Windows.Forms.ComboBox();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.GrpDatosEconomicos = new System.Windows.Forms.GroupBox();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.TxtLimiteCobertura = new System.Windows.Forms.TextBox();
             this.label55 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -149,8 +132,6 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.CboTipoFiliacion = new System.Windows.Forms.ComboBox();
             this.TxtNombreTitular = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.BtnSiteds = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
             this.CboBeneficio = new System.Windows.Forms.ComboBox();
             this.label26 = new System.Windows.Forms.Label();
@@ -172,6 +153,24 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.CboEspecialidad = new System.Windows.Forms.ComboBox();
             this.label27 = new System.Windows.Forms.Label();
             this.CboMedico = new System.Windows.Forms.ComboBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.CboTipoHospitalizacion = new System.Windows.Forms.ComboBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.CboHabitacionAlta = new System.Windows.Forms.ComboBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.TxtHoraAlta = new System.Windows.Forms.TextBox();
+            this.DtFechaIngreso = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.CboMotivoAlta = new System.Windows.Forms.ComboBox();
+            this.TxtHoraIngreso = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.DtFechaAlta = new System.Windows.Forms.DateTimePicker();
+            this.label31 = new System.Windows.Forms.Label();
+            this.CboHabitacionIngreso = new System.Windows.Forms.ComboBox();
+            this.BtnSiteds = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.errValidator = new System.Windows.Forms.ErrorProvider(this.components);
@@ -179,19 +178,19 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.gbMensjaje.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.GrpConsultorio.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            this.gbMensjaje.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox9.SuspendLayout();
-            this.groupBox7.SuspendLayout();
             this.GrpDiagnostico.SuspendLayout();
             this.GrpDatosEconomicos.SuspendLayout();
             this.grpMensaje.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errValidator)).BeginInit();
             this.SuspendLayout();
             // 
@@ -273,6 +272,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.LblCuentaCorriente.Size = new System.Drawing.Size(60, 26);
             this.LblCuentaCorriente.TabIndex = 36;
             this.LblCuentaCorriente.Text = "0000";
+            this.LblCuentaCorriente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LblSexo
             // 
@@ -545,85 +545,99 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.LblUbigeoNacimiento.TabIndex = 7;
             this.LblUbigeoNacimiento.Text = "--";
             // 
+            // gbMensjaje
+            // 
+            this.gbMensjaje.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.gbMensjaje.Controls.Add(this.label13);
+            this.gbMensjaje.Controls.Add(this.pictureBox1);
+            this.gbMensjaje.Location = new System.Drawing.Point(350, 34);
+            this.gbMensjaje.Name = "gbMensjaje";
+            this.gbMensjaje.Size = new System.Drawing.Size(184, 108);
+            this.gbMensjaje.TabIndex = 148;
+            this.gbMensjaje.TabStop = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.SkyBlue;
+            this.label13.Location = new System.Drawing.Point(6, 79);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(177, 20);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Cargando Formulario";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Romsoft.GESTIONCLINICA.Presentacion.Properties.Resources.loading;
+            this.pictureBox1.Location = new System.Drawing.Point(33, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(115, 87);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.tabControl1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(244, 0);
+            this.panel2.Location = new System.Drawing.Point(229, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(940, 731);
+            this.panel2.Size = new System.Drawing.Size(989, 731);
             this.panel2.TabIndex = 57;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(5, 9);
+            this.tabControl1.Location = new System.Drawing.Point(22, 9);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(922, 717);
+            this.tabControl1.Size = new System.Drawing.Size(962, 717);
             this.tabControl1.TabIndex = 61;
             // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.tabPage2.Controls.Add(this.label58);
-            this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Controls.Add(this.label57);
+            this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.GrpConsultorio);
             this.tabPage2.Controls.Add(this.BtnFacturar);
-            this.tabPage2.Controls.Add(this.BtnHojaRuta);
             this.tabPage2.Controls.Add(this.groupBox6);
             this.tabPage2.Controls.Add(this.groupBox9);
-            this.tabPage2.Controls.Add(this.groupBox7);
             this.tabPage2.Controls.Add(this.BtnCancelar);
             this.tabPage2.Controls.Add(this.GrpDiagnostico);
             this.tabPage2.Controls.Add(this.BtnGuardar);
             this.tabPage2.Controls.Add(this.GrpDatosEconomicos);
             this.tabPage2.Controls.Add(this.grpMensaje);
             this.tabPage2.Controls.Add(this.groupBox4);
+            this.tabPage2.Controls.Add(this.groupBox7);
+            this.tabPage2.Controls.Add(this.BtnSiteds);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(914, 691);
+            this.tabPage2.Size = new System.Drawing.Size(954, 691);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Detalle de la Atención";
             // 
-            // label58
+            // button1
             // 
-            this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.ForeColor = System.Drawing.Color.Gray;
-            this.label58.Location = new System.Drawing.Point(867, 666);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(35, 13);
-            this.label58.TabIndex = 149;
-            this.label58.Text = "Cerrar";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Gray;
-            this.label9.Location = new System.Drawing.Point(780, 666);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(45, 13);
-            this.label9.TabIndex = 148;
-            this.label9.Text = "Guardar";
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.ForeColor = System.Drawing.Color.Gray;
-            this.label57.Location = new System.Drawing.Point(291, 664);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(344, 13);
-            this.label57.TabIndex = 147;
-            this.label57.Text = "Caso Ambulatorio si hubiese un Copago/Consulta generar comprobante";
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(711, 656);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 27);
+            this.button1.TabIndex = 68;
+            this.button1.Text = "      Anular Atención";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             // 
             // GrpConsultorio
             // 
@@ -637,9 +651,9 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.GrpConsultorio.Controls.Add(this.label45);
             this.GrpConsultorio.Controls.Add(this.DtAtencion);
             this.GrpConsultorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrpConsultorio.Location = new System.Drawing.Point(6, 133);
+            this.GrpConsultorio.Location = new System.Drawing.Point(6, 126);
             this.GrpConsultorio.Name = "GrpConsultorio";
-            this.GrpConsultorio.Size = new System.Drawing.Size(513, 78);
+            this.GrpConsultorio.Size = new System.Drawing.Size(551, 78);
             this.GrpConsultorio.TabIndex = 63;
             this.GrpConsultorio.TabStop = false;
             this.GrpConsultorio.Text = "Consultorio";
@@ -666,11 +680,12 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             // BtnCita
             // 
+            this.BtnCita.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCita.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BtnCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCita.Image = ((System.Drawing.Image)(resources.GetObject("BtnCita.Image")));
-            this.BtnCita.Location = new System.Drawing.Point(468, 35);
+            this.BtnCita.Location = new System.Drawing.Point(512, 35);
             this.BtnCita.Name = "BtnCita";
             this.BtnCita.Size = new System.Drawing.Size(27, 27);
             this.BtnCita.TabIndex = 64;
@@ -689,7 +704,6 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             // CboConsultorio
             // 
-            this.CboConsultorio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CboConsultorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboConsultorio.ForeColor = System.Drawing.Color.Black;
             this.CboConsultorio.FormattingEnabled = true;
@@ -741,82 +755,33 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // BtnFacturar
             // 
             this.BtnFacturar.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.BtnFacturar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.BtnFacturar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnFacturar.Enabled = false;
             this.BtnFacturar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BtnFacturar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.BtnFacturar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnFacturar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnFacturar.Image = ((System.Drawing.Image)(resources.GetObject("BtnFacturar.Image")));
             this.BtnFacturar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnFacturar.Location = new System.Drawing.Point(7, 656);
+            this.BtnFacturar.Location = new System.Drawing.Point(318, 656);
             this.BtnFacturar.Name = "BtnFacturar";
-            this.BtnFacturar.Size = new System.Drawing.Size(169, 26);
+            this.BtnFacturar.Size = new System.Drawing.Size(239, 27);
             this.BtnFacturar.TabIndex = 67;
-            this.BtnFacturar.Text = "   Facturar Copago/Consulta";
+            this.BtnFacturar.Text = "   Facturar Copago/Consulta-Ambulatorio";
             this.BtnFacturar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnFacturar.UseVisualStyleBackColor = false;
             this.BtnFacturar.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // BtnHojaRuta
-            // 
-            this.BtnHojaRuta.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.BtnHojaRuta.Cursor = System.Windows.Forms.Cursors.Default;
-            this.BtnHojaRuta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.BtnHojaRuta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.BtnHojaRuta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnHojaRuta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnHojaRuta.Image = ((System.Drawing.Image)(resources.GetObject("BtnHojaRuta.Image")));
-            this.BtnHojaRuta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnHojaRuta.Location = new System.Drawing.Point(182, 656);
-            this.BtnHojaRuta.Name = "BtnHojaRuta";
-            this.BtnHojaRuta.Size = new System.Drawing.Size(103, 27);
-            this.BtnHojaRuta.TabIndex = 66;
-            this.BtnHojaRuta.Text = "   Hoja Ruta";
-            this.BtnHojaRuta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnHojaRuta.UseVisualStyleBackColor = false;
             // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.TxtObservacionGeneral);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(525, 496);
+            this.groupBox6.Location = new System.Drawing.Point(563, 469);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(383, 156);
+            this.groupBox6.Size = new System.Drawing.Size(383, 101);
             this.groupBox6.TabIndex = 63;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Observación general";
-            // 
-            // gbMensjaje
-            // 
-            this.gbMensjaje.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.gbMensjaje.Controls.Add(this.label13);
-            this.gbMensjaje.Controls.Add(this.pictureBox1);
-            this.gbMensjaje.Location = new System.Drawing.Point(288, 50);
-            this.gbMensjaje.Name = "gbMensjaje";
-            this.gbMensjaje.Size = new System.Drawing.Size(184, 108);
-            this.gbMensjaje.TabIndex = 148;
-            this.gbMensjaje.TabStop = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.SkyBlue;
-            this.label13.Location = new System.Drawing.Point(6, 79);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(177, 20);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "Cargando Formulario";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Romsoft.GESTIONCLINICA.Presentacion.Properties.Resources.loading;
-            this.pictureBox1.Location = new System.Drawing.Point(33, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(115, 87);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // TxtObservacionGeneral
             // 
@@ -826,7 +791,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.TxtObservacionGeneral.Multiline = true;
             this.TxtObservacionGeneral.Name = "TxtObservacionGeneral";
             this.TxtObservacionGeneral.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TxtObservacionGeneral.Size = new System.Drawing.Size(351, 124);
+            this.TxtObservacionGeneral.Size = new System.Drawing.Size(351, 66);
             this.TxtObservacionGeneral.TabIndex = 66;
             // 
             // groupBox9
@@ -837,9 +802,9 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.groupBox9.Controls.Add(this.ChkDejaDenuncia);
             this.groupBox9.Controls.Add(this.TxtObservacionAccidente);
             this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox9.Location = new System.Drawing.Point(525, 16);
+            this.groupBox9.Location = new System.Drawing.Point(563, 9);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(382, 150);
+            this.groupBox9.Size = new System.Drawing.Size(382, 130);
             this.groupBox9.TabIndex = 60;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Datos de Accidente";
@@ -894,218 +859,24 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.TxtObservacionAccidente.Multiline = true;
             this.TxtObservacionAccidente.Name = "TxtObservacionAccidente";
             this.TxtObservacionAccidente.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TxtObservacionAccidente.Size = new System.Drawing.Size(351, 60);
+            this.TxtObservacionAccidente.Size = new System.Drawing.Size(351, 43);
             this.TxtObservacionAccidente.TabIndex = 68;
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.label53);
-            this.groupBox7.Controls.Add(this.CboTipoHospitalizacion);
-            this.groupBox7.Controls.Add(this.label48);
-            this.groupBox7.Controls.Add(this.label40);
-            this.groupBox7.Controls.Add(this.CboHabitacionAlta);
-            this.groupBox7.Controls.Add(this.label39);
-            this.groupBox7.Controls.Add(this.TxtHoraAlta);
-            this.groupBox7.Controls.Add(this.DtFechaIngreso);
-            this.groupBox7.Controls.Add(this.label11);
-            this.groupBox7.Controls.Add(this.label33);
-            this.groupBox7.Controls.Add(this.CboMotivoAlta);
-            this.groupBox7.Controls.Add(this.TxtHoraIngreso);
-            this.groupBox7.Controls.Add(this.label30);
-            this.groupBox7.Controls.Add(this.DtFechaAlta);
-            this.groupBox7.Controls.Add(this.label31);
-            this.groupBox7.Controls.Add(this.CboHabitacionIngreso);
-            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(525, 292);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(382, 198);
-            this.groupBox7.TabIndex = 64;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "En el caso sea una atención Hospitalaria";
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.ForeColor = System.Drawing.Color.Gray;
-            this.label53.Location = new System.Drawing.Point(15, 27);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(105, 13);
-            this.label53.TabIndex = 78;
-            this.label53.Text = "Tipo Hospitalización:";
-            // 
-            // CboTipoHospitalizacion
-            // 
-            this.CboTipoHospitalizacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CboTipoHospitalizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CboTipoHospitalizacion.ForeColor = System.Drawing.Color.Black;
-            this.CboTipoHospitalizacion.FormattingEnabled = true;
-            this.CboTipoHospitalizacion.Location = new System.Drawing.Point(18, 43);
-            this.CboTipoHospitalizacion.Name = "CboTipoHospitalizacion";
-            this.CboTipoHospitalizacion.Size = new System.Drawing.Size(351, 21);
-            this.CboTipoHospitalizacion.TabIndex = 77;
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.ForeColor = System.Drawing.Color.Gray;
-            this.label48.Location = new System.Drawing.Point(122, 109);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(33, 13);
-            this.label48.TabIndex = 76;
-            this.label48.Text = "Hora:";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.ForeColor = System.Drawing.Color.Gray;
-            this.label40.Location = new System.Drawing.Point(197, 109);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(101, 13);
-            this.label40.TabIndex = 75;
-            this.label40.Text = "Número Habitación:";
-            // 
-            // CboHabitacionAlta
-            // 
-            this.CboHabitacionAlta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CboHabitacionAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CboHabitacionAlta.ForeColor = System.Drawing.Color.Black;
-            this.CboHabitacionAlta.FormattingEnabled = true;
-            this.CboHabitacionAlta.Location = new System.Drawing.Point(200, 125);
-            this.CboHabitacionAlta.Name = "CboHabitacionAlta";
-            this.CboHabitacionAlta.Size = new System.Drawing.Size(169, 21);
-            this.CboHabitacionAlta.TabIndex = 74;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.ForeColor = System.Drawing.Color.Gray;
-            this.label39.Location = new System.Drawing.Point(197, 68);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(101, 13);
-            this.label39.TabIndex = 73;
-            this.label39.Text = "Número Habitación:";
-            // 
-            // TxtHoraAlta
-            // 
-            this.TxtHoraAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtHoraAlta.ForeColor = System.Drawing.Color.Black;
-            this.TxtHoraAlta.Location = new System.Drawing.Point(125, 125);
-            this.TxtHoraAlta.Name = "TxtHoraAlta";
-            this.TxtHoraAlta.Size = new System.Drawing.Size(71, 20);
-            this.TxtHoraAlta.TabIndex = 72;
-            // 
-            // DtFechaIngreso
-            // 
-            this.DtFechaIngreso.Enabled = false;
-            this.DtFechaIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DtFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtFechaIngreso.Location = new System.Drawing.Point(18, 84);
-            this.DtFechaIngreso.Name = "DtFechaIngreso";
-            this.DtFechaIngreso.Size = new System.Drawing.Size(103, 20);
-            this.DtFechaIngreso.TabIndex = 71;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(13, 68);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(93, 13);
-            this.label11.TabIndex = 70;
-            this.label11.Text = "Fecha de Ingreso:";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.Color.Gray;
-            this.label33.Location = new System.Drawing.Point(15, 150);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(78, 13);
-            this.label33.TabIndex = 69;
-            this.label33.Text = "Motivo de Alta:";
-            // 
-            // CboMotivoAlta
-            // 
-            this.CboMotivoAlta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CboMotivoAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CboMotivoAlta.ForeColor = System.Drawing.Color.Black;
-            this.CboMotivoAlta.FormattingEnabled = true;
-            this.CboMotivoAlta.Location = new System.Drawing.Point(18, 166);
-            this.CboMotivoAlta.Name = "CboMotivoAlta";
-            this.CboMotivoAlta.Size = new System.Drawing.Size(351, 21);
-            this.CboMotivoAlta.TabIndex = 68;
-            // 
-            // TxtHoraIngreso
-            // 
-            this.TxtHoraIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtHoraIngreso.ForeColor = System.Drawing.Color.Black;
-            this.TxtHoraIngreso.Location = new System.Drawing.Point(125, 84);
-            this.TxtHoraIngreso.Name = "TxtHoraIngreso";
-            this.TxtHoraIngreso.Size = new System.Drawing.Size(71, 20);
-            this.TxtHoraIngreso.TabIndex = 67;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.Gray;
-            this.label30.Location = new System.Drawing.Point(122, 68);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(33, 13);
-            this.label30.TabIndex = 66;
-            this.label30.Text = "Hora:";
-            // 
-            // DtFechaAlta
-            // 
-            this.DtFechaAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DtFechaAlta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtFechaAlta.Location = new System.Drawing.Point(18, 125);
-            this.DtFechaAlta.Name = "DtFechaAlta";
-            this.DtFechaAlta.Size = new System.Drawing.Size(103, 20);
-            this.DtFechaAlta.TabIndex = 65;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.Gray;
-            this.label31.Location = new System.Drawing.Point(13, 109);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(76, 13);
-            this.label31.TabIndex = 64;
-            this.label31.Text = "Fecha de Alta:";
-            // 
-            // CboHabitacionIngreso
-            // 
-            this.CboHabitacionIngreso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CboHabitacionIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CboHabitacionIngreso.ForeColor = System.Drawing.Color.Black;
-            this.CboHabitacionIngreso.FormattingEnabled = true;
-            this.CboHabitacionIngreso.Location = new System.Drawing.Point(200, 84);
-            this.CboHabitacionIngreso.Name = "CboHabitacionIngreso";
-            this.CboHabitacionIngreso.Size = new System.Drawing.Size(169, 21);
-            this.CboHabitacionIngreso.TabIndex = 61;
             // 
             // BtnCancelar
             // 
             this.BtnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.BtnCancelar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.BtnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BtnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCancelar.Image")));
             this.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCancelar.Location = new System.Drawing.Point(836, 659);
+            this.BtnCancelar.Location = new System.Drawing.Point(850, 656);
             this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(28, 27);
+            this.BtnCancelar.Size = new System.Drawing.Size(95, 27);
             this.BtnCancelar.TabIndex = 59;
+            this.BtnCancelar.Text = "      Cerrar";
             this.BtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnCancelar.UseVisualStyleBackColor = false;
             this.BtnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -1119,9 +890,9 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.GrpDiagnostico.Controls.Add(this.label29);
             this.GrpDiagnostico.Controls.Add(this.CboTipoDiagnostico);
             this.GrpDiagnostico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrpDiagnostico.Location = new System.Drawing.Point(6, 583);
+            this.GrpDiagnostico.Location = new System.Drawing.Point(563, 575);
             this.GrpDiagnostico.Name = "GrpDiagnostico";
-            this.GrpDiagnostico.Size = new System.Drawing.Size(513, 69);
+            this.GrpDiagnostico.Size = new System.Drawing.Size(383, 69);
             this.GrpDiagnostico.TabIndex = 62;
             this.GrpDiagnostico.TabStop = false;
             this.GrpDiagnostico.Text = "Diagnóstico";
@@ -1131,7 +902,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.txtDiagnostico.Enabled = false;
             this.txtDiagnostico.Location = new System.Drawing.Point(155, 37);
             this.txtDiagnostico.Name = "txtDiagnostico";
-            this.txtDiagnostico.Size = new System.Drawing.Size(310, 20);
+            this.txtDiagnostico.Size = new System.Drawing.Size(191, 20);
             this.txtDiagnostico.TabIndex = 148;
             // 
             // txtIdDiagnostico
@@ -1145,14 +916,14 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // BtnObtenerDiagnostico
             // 
             this.BtnObtenerDiagnostico.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.BtnObtenerDiagnostico.Cursor = System.Windows.Forms.Cursors.Default;
+            this.BtnObtenerDiagnostico.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnObtenerDiagnostico.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.BtnObtenerDiagnostico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnObtenerDiagnostico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnObtenerDiagnostico.ForeColor = System.Drawing.Color.Black;
             this.BtnObtenerDiagnostico.Image = ((System.Drawing.Image)(resources.GetObject("BtnObtenerDiagnostico.Image")));
             this.BtnObtenerDiagnostico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnObtenerDiagnostico.Location = new System.Drawing.Point(471, 33);
+            this.BtnObtenerDiagnostico.Location = new System.Drawing.Point(352, 33);
             this.BtnObtenerDiagnostico.Name = "BtnObtenerDiagnostico";
             this.BtnObtenerDiagnostico.Size = new System.Drawing.Size(26, 26);
             this.BtnObtenerDiagnostico.TabIndex = 146;
@@ -1184,7 +955,6 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             // CboTipoDiagnostico
             // 
-            this.CboTipoDiagnostico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CboTipoDiagnostico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboTipoDiagnostico.ForeColor = System.Drawing.Color.Black;
             this.CboTipoDiagnostico.FormattingEnabled = true;
@@ -1195,21 +965,26 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             // BtnGuardar
             // 
+            this.BtnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("BtnGuardar.Image")));
             this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGuardar.Location = new System.Drawing.Point(749, 659);
+            this.BtnGuardar.Location = new System.Drawing.Point(563, 656);
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(28, 27);
+            this.BtnGuardar.Size = new System.Drawing.Size(142, 27);
             this.BtnGuardar.TabIndex = 35;
+            this.BtnGuardar.Text = "   Guardar Atención";
             this.BtnGuardar.UseVisualStyleBackColor = true;
             this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // GrpDatosEconomicos
             // 
             this.GrpDatosEconomicos.Controls.Add(this.gbMensjaje);
+            this.GrpDatosEconomicos.Controls.Add(this.label57);
+            this.GrpDatosEconomicos.Controls.Add(this.label35);
+            this.GrpDatosEconomicos.Controls.Add(this.label9);
             this.GrpDatosEconomicos.Controls.Add(this.TxtLimiteCobertura);
             this.GrpDatosEconomicos.Controls.Add(this.label55);
             this.GrpDatosEconomicos.Controls.Add(this.label2);
@@ -1244,8 +1019,6 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.GrpDatosEconomicos.Controls.Add(this.CboTipoFiliacion);
             this.GrpDatosEconomicos.Controls.Add(this.TxtNombreTitular);
             this.GrpDatosEconomicos.Controls.Add(this.label37);
-            this.GrpDatosEconomicos.Controls.Add(this.label35);
-            this.GrpDatosEconomicos.Controls.Add(this.BtnSiteds);
             this.GrpDatosEconomicos.Controls.Add(this.label25);
             this.GrpDatosEconomicos.Controls.Add(this.CboBeneficio);
             this.GrpDatosEconomicos.Controls.Add(this.label26);
@@ -1253,18 +1026,51 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.GrpDatosEconomicos.Controls.Add(this.CboCategoriaPago);
             this.GrpDatosEconomicos.Controls.Add(this.CboPlanSeguro);
             this.GrpDatosEconomicos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrpDatosEconomicos.Location = new System.Drawing.Point(6, 216);
+            this.GrpDatosEconomicos.Location = new System.Drawing.Point(6, 209);
             this.GrpDatosEconomicos.Name = "GrpDatosEconomicos";
-            this.GrpDatosEconomicos.Size = new System.Drawing.Size(513, 361);
+            this.GrpDatosEconomicos.Size = new System.Drawing.Size(551, 435);
             this.GrpDatosEconomicos.TabIndex = 61;
             this.GrpDatosEconomicos.TabStop = false;
             this.GrpDatosEconomicos.Text = "Datos Económicos:";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.ForeColor = System.Drawing.Color.Gray;
+            this.label57.Location = new System.Drawing.Point(430, 329);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(15, 13);
+            this.label57.TabIndex = 95;
+            this.label57.Text = "%";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.Gray;
+            this.label35.Location = new System.Drawing.Point(310, 329);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(15, 13);
+            this.label35.TabIndex = 94;
+            this.label35.Text = "%";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(201, 289);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(255, 13);
+            this.label9.TabIndex = 93;
+            this.label9.Text = "Nota: El seguro asume el 80% de los gastos";
             // 
             // TxtLimiteCobertura
             // 
             this.TxtLimiteCobertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtLimiteCobertura.ForeColor = System.Drawing.Color.Black;
-            this.TxtLimiteCobertura.Location = new System.Drawing.Point(358, 327);
+            this.TxtLimiteCobertura.Location = new System.Drawing.Point(398, 365);
             this.TxtLimiteCobertura.Name = "TxtLimiteCobertura";
             this.TxtLimiteCobertura.Size = new System.Drawing.Size(140, 20);
             this.TxtLimiteCobertura.TabIndex = 92;
@@ -1274,7 +1080,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.label55.AutoSize = true;
             this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label55.ForeColor = System.Drawing.Color.Gray;
-            this.label55.Location = new System.Drawing.Point(355, 312);
+            this.label55.Location = new System.Drawing.Point(395, 349);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(103, 13);
             this.label55.TabIndex = 91;
@@ -1298,7 +1104,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.CboTipoDocAutorizador2.FormattingEnabled = true;
             this.CboTipoDocAutorizador2.Location = new System.Drawing.Point(18, 206);
             this.CboTipoDocAutorizador2.Name = "CboTipoDocAutorizador2";
-            this.CboTipoDocAutorizador2.Size = new System.Drawing.Size(224, 21);
+            this.CboTipoDocAutorizador2.Size = new System.Drawing.Size(264, 21);
             this.CboTipoDocAutorizador2.TabIndex = 89;
             // 
             // label4
@@ -1306,7 +1112,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(384, 189);
+            this.label4.Location = new System.Drawing.Point(423, 189);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(116, 13);
             this.label4.TabIndex = 88;
@@ -1316,7 +1122,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             this.DtFechaAutorizacion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtFechaAutorizacion2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtFechaAutorizacion2.Location = new System.Drawing.Point(387, 207);
+            this.DtFechaAutorizacion2.Location = new System.Drawing.Point(426, 207);
             this.DtFechaAutorizacion2.Name = "DtFechaAutorizacion2";
             this.DtFechaAutorizacion2.Size = new System.Drawing.Size(112, 20);
             this.DtFechaAutorizacion2.TabIndex = 85;
@@ -1325,7 +1131,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             this.TxtDocumentoAutorizador2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDocumentoAutorizador2.ForeColor = System.Drawing.Color.Black;
-            this.TxtDocumentoAutorizador2.Location = new System.Drawing.Point(248, 207);
+            this.TxtDocumentoAutorizador2.Location = new System.Drawing.Point(288, 207);
             this.TxtDocumentoAutorizador2.Name = "TxtDocumentoAutorizador2";
             this.TxtDocumentoAutorizador2.Size = new System.Drawing.Size(133, 20);
             this.TxtDocumentoAutorizador2.TabIndex = 87;
@@ -1335,7 +1141,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(245, 189);
+            this.label5.Location = new System.Drawing.Point(285, 189);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(136, 13);
             this.label5.TabIndex = 86;
@@ -1345,7 +1151,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             this.TxtContrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtContrato.ForeColor = System.Drawing.Color.Black;
-            this.TxtContrato.Location = new System.Drawing.Point(421, 81);
+            this.TxtContrato.Location = new System.Drawing.Point(461, 80);
             this.TxtContrato.Name = "TxtContrato";
             this.TxtContrato.Size = new System.Drawing.Size(78, 20);
             this.TxtContrato.TabIndex = 84;
@@ -1355,7 +1161,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label50.ForeColor = System.Drawing.Color.Gray;
-            this.label50.Location = new System.Drawing.Point(418, 65);
+            this.label50.Location = new System.Drawing.Point(449, 65);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(90, 13);
             this.label50.TabIndex = 83;
@@ -1365,9 +1171,9 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             this.TxtCodigoAsegurado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCodigoAsegurado.ForeColor = System.Drawing.Color.Black;
-            this.TxtCodigoAsegurado.Location = new System.Drawing.Point(319, 81);
+            this.TxtCodigoAsegurado.Location = new System.Drawing.Point(350, 81);
             this.TxtCodigoAsegurado.Name = "TxtCodigoAsegurado";
-            this.TxtCodigoAsegurado.Size = new System.Drawing.Size(96, 20);
+            this.TxtCodigoAsegurado.Size = new System.Drawing.Size(106, 20);
             this.TxtCodigoAsegurado.TabIndex = 82;
             // 
             // label49
@@ -1375,7 +1181,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label49.ForeColor = System.Drawing.Color.Gray;
-            this.label49.Location = new System.Drawing.Point(316, 65);
+            this.label49.Location = new System.Drawing.Point(347, 65);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(97, 13);
             this.label49.TabIndex = 81;
@@ -1386,7 +1192,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.ForeColor = System.Drawing.Color.Gray;
-            this.label41.Location = new System.Drawing.Point(191, 271);
+            this.label41.Location = new System.Drawing.Point(15, 310);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(49, 13);
             this.label41.TabIndex = 80;
@@ -1394,13 +1200,12 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             // CboMoneda
             // 
-            this.CboMoneda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CboMoneda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboMoneda.ForeColor = System.Drawing.Color.Black;
             this.CboMoneda.FormattingEnabled = true;
-            this.CboMoneda.Location = new System.Drawing.Point(194, 286);
+            this.CboMoneda.Location = new System.Drawing.Point(18, 325);
             this.CboMoneda.Name = "CboMoneda";
-            this.CboMoneda.Size = new System.Drawing.Size(76, 21);
+            this.CboMoneda.Size = new System.Drawing.Size(103, 21);
             this.CboMoneda.TabIndex = 79;
             // 
             // label47
@@ -1416,13 +1221,12 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             // CboTipoDocAutorizador1
             // 
-            this.CboTipoDocAutorizador1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CboTipoDocAutorizador1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboTipoDocAutorizador1.ForeColor = System.Drawing.Color.Black;
             this.CboTipoDocAutorizador1.FormattingEnabled = true;
             this.CboTipoDocAutorizador1.Location = new System.Drawing.Point(18, 162);
             this.CboTipoDocAutorizador1.Name = "CboTipoDocAutorizador1";
-            this.CboTipoDocAutorizador1.Size = new System.Drawing.Size(224, 21);
+            this.CboTipoDocAutorizador1.Size = new System.Drawing.Size(264, 21);
             this.CboTipoDocAutorizador1.TabIndex = 77;
             // 
             // label46
@@ -1430,7 +1234,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.ForeColor = System.Drawing.Color.Gray;
-            this.label46.Location = new System.Drawing.Point(384, 145);
+            this.label46.Location = new System.Drawing.Point(423, 145);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(116, 13);
             this.label46.TabIndex = 76;
@@ -1440,7 +1244,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             this.DtFechaAutorizacion1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtFechaAutorizacion1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtFechaAutorizacion1.Location = new System.Drawing.Point(387, 163);
+            this.DtFechaAutorizacion1.Location = new System.Drawing.Point(426, 163);
             this.DtFechaAutorizacion1.Name = "DtFechaAutorizacion1";
             this.DtFechaAutorizacion1.Size = new System.Drawing.Size(112, 20);
             this.DtFechaAutorizacion1.TabIndex = 48;
@@ -1449,7 +1253,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             this.TxtDocumentoAutorizador1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDocumentoAutorizador1.ForeColor = System.Drawing.Color.Black;
-            this.TxtDocumentoAutorizador1.Location = new System.Drawing.Point(248, 163);
+            this.TxtDocumentoAutorizador1.Location = new System.Drawing.Point(288, 163);
             this.TxtDocumentoAutorizador1.Name = "TxtDocumentoAutorizador1";
             this.TxtDocumentoAutorizador1.Size = new System.Drawing.Size(133, 20);
             this.TxtDocumentoAutorizador1.TabIndex = 75;
@@ -1459,7 +1263,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.ForeColor = System.Drawing.Color.Gray;
-            this.label42.Location = new System.Drawing.Point(245, 145);
+            this.label42.Location = new System.Drawing.Point(285, 145);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(136, 13);
             this.label42.TabIndex = 74;
@@ -1469,9 +1273,9 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             this.TxtCoaseguroFarmacia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCoaseguroFarmacia.ForeColor = System.Drawing.Color.Black;
-            this.TxtCoaseguroFarmacia.Location = new System.Drawing.Point(425, 286);
+            this.TxtCoaseguroFarmacia.Location = new System.Drawing.Point(326, 325);
             this.TxtCoaseguroFarmacia.Name = "TxtCoaseguroFarmacia";
-            this.TxtCoaseguroFarmacia.Size = new System.Drawing.Size(73, 20);
+            this.TxtCoaseguroFarmacia.Size = new System.Drawing.Size(103, 20);
             this.TxtCoaseguroFarmacia.TabIndex = 71;
             this.TxtCoaseguroFarmacia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1480,19 +1284,19 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ForeColor = System.Drawing.Color.Gray;
-            this.label38.Location = new System.Drawing.Point(419, 271);
+            this.label38.Location = new System.Drawing.Point(326, 309);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(83, 13);
+            this.label38.Size = new System.Drawing.Size(107, 13);
             this.label38.TabIndex = 70;
-            this.label38.Text = "Coas. Farmacia:";
+            this.label38.Text = "Coaseguro Farmacia:";
             // 
             // TxtCoaseguro
             // 
             this.TxtCoaseguro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCoaseguro.ForeColor = System.Drawing.Color.Black;
-            this.TxtCoaseguro.Location = new System.Drawing.Point(350, 286);
+            this.TxtCoaseguro.Location = new System.Drawing.Point(204, 325);
             this.TxtCoaseguro.Name = "TxtCoaseguro";
-            this.TxtCoaseguro.Size = new System.Drawing.Size(73, 20);
+            this.TxtCoaseguro.Size = new System.Drawing.Size(105, 20);
             this.TxtCoaseguro.TabIndex = 69;
             this.TxtCoaseguro.Text = "0.00";
             this.TxtCoaseguro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -1503,17 +1307,17 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.Gray;
-            this.label34.Location = new System.Drawing.Point(348, 271);
+            this.label34.Location = new System.Drawing.Point(202, 310);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(61, 13);
+            this.label34.Size = new System.Drawing.Size(107, 13);
             this.label34.TabIndex = 68;
-            this.label34.Text = "Coaseguro:";
+            this.label34.Text = "Coaseguro Servicios:";
             // 
             // TxtCopago
             // 
             this.TxtCopago.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCopago.ForeColor = System.Drawing.Color.Black;
-            this.TxtCopago.Location = new System.Drawing.Point(274, 286);
+            this.TxtCopago.Location = new System.Drawing.Point(128, 325);
             this.TxtCopago.Name = "TxtCopago";
             this.TxtCopago.Size = new System.Drawing.Size(73, 20);
             this.TxtCopago.TabIndex = 67;
@@ -1537,7 +1341,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.Gray;
-            this.label23.Location = new System.Drawing.Point(271, 271);
+            this.label23.Location = new System.Drawing.Point(125, 310);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(47, 13);
             this.label23.TabIndex = 66;
@@ -1545,7 +1349,6 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             // CboTipoAfiliacion
             // 
-            this.CboTipoAfiliacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CboTipoAfiliacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboTipoAfiliacion.ForeColor = System.Drawing.Color.Black;
             this.CboTipoAfiliacion.FormattingEnabled = true;
@@ -1559,7 +1362,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(15, 310);
+            this.label12.Location = new System.Drawing.Point(15, 349);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(77, 13);
             this.label12.TabIndex = 63;
@@ -1567,13 +1370,12 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             // CboProductoPlan
             // 
-            this.CboProductoPlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CboProductoPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboProductoPlan.ForeColor = System.Drawing.Color.Black;
             this.CboProductoPlan.FormattingEnabled = true;
-            this.CboProductoPlan.Location = new System.Drawing.Point(18, 326);
+            this.CboProductoPlan.Location = new System.Drawing.Point(18, 365);
             this.CboProductoPlan.Name = "CboProductoPlan";
-            this.CboProductoPlan.Size = new System.Drawing.Size(335, 21);
+            this.CboProductoPlan.Size = new System.Drawing.Size(374, 21);
             this.CboProductoPlan.TabIndex = 62;
             // 
             // label51
@@ -1589,7 +1391,6 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             // CboTipoFiliacion
             // 
-            this.CboTipoFiliacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CboTipoFiliacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboTipoFiliacion.ForeColor = System.Drawing.Color.Black;
             this.CboTipoFiliacion.FormattingEnabled = true;
@@ -1604,7 +1405,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.TxtNombreTitular.ForeColor = System.Drawing.Color.Black;
             this.TxtNombreTitular.Location = new System.Drawing.Point(194, 247);
             this.TxtNombreTitular.Name = "TxtNombreTitular";
-            this.TxtNombreTitular.Size = new System.Drawing.Size(304, 20);
+            this.TxtNombreTitular.Size = new System.Drawing.Size(344, 20);
             this.TxtNombreTitular.TabIndex = 58;
             // 
             // label37
@@ -1617,30 +1418,6 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.label37.Size = new System.Drawing.Size(79, 13);
             this.label37.TabIndex = 61;
             this.label37.Text = "Nombre Titular:";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.Color.Gray;
-            this.label35.Location = new System.Drawing.Point(392, 18);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(96, 13);
-            this.label35.TabIndex = 35;
-            this.label35.Text = "SUSALUD - Siteds";
-            // 
-            // BtnSiteds
-            // 
-            this.BtnSiteds.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.BtnSiteds.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSiteds.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSiteds.Image = ((System.Drawing.Image)(resources.GetObject("BtnSiteds.Image")));
-            this.BtnSiteds.Location = new System.Drawing.Point(366, 11);
-            this.BtnSiteds.Name = "BtnSiteds";
-            this.BtnSiteds.Size = new System.Drawing.Size(25, 24);
-            this.BtnSiteds.TabIndex = 34;
-            this.BtnSiteds.UseVisualStyleBackColor = true;
-            this.BtnSiteds.Click += new System.EventHandler(this.btnSiteds_Click);
             // 
             // label25
             // 
@@ -1655,13 +1432,12 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             // CboBeneficio
             // 
-            this.CboBeneficio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CboBeneficio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboBeneficio.ForeColor = System.Drawing.Color.Black;
             this.CboBeneficio.FormattingEnabled = true;
             this.CboBeneficio.Location = new System.Drawing.Point(18, 121);
             this.CboBeneficio.Name = "CboBeneficio";
-            this.CboBeneficio.Size = new System.Drawing.Size(480, 21);
+            this.CboBeneficio.Size = new System.Drawing.Size(521, 21);
             this.CboBeneficio.TabIndex = 48;
             // 
             // label26
@@ -1688,24 +1464,22 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             // CboCategoriaPago
             // 
-            this.CboCategoriaPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CboCategoriaPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboCategoriaPago.ForeColor = System.Drawing.Color.Black;
             this.CboCategoriaPago.FormattingEnabled = true;
             this.CboCategoriaPago.Location = new System.Drawing.Point(18, 80);
             this.CboCategoriaPago.Name = "CboCategoriaPago";
-            this.CboCategoriaPago.Size = new System.Drawing.Size(295, 21);
+            this.CboCategoriaPago.Size = new System.Drawing.Size(326, 21);
             this.CboCategoriaPago.TabIndex = 52;
             // 
             // CboPlanSeguro
             // 
-            this.CboPlanSeguro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CboPlanSeguro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboPlanSeguro.ForeColor = System.Drawing.Color.Black;
             this.CboPlanSeguro.FormattingEnabled = true;
             this.CboPlanSeguro.Location = new System.Drawing.Point(18, 40);
             this.CboPlanSeguro.Name = "CboPlanSeguro";
-            this.CboPlanSeguro.Size = new System.Drawing.Size(480, 21);
+            this.CboPlanSeguro.Size = new System.Drawing.Size(521, 21);
             this.CboPlanSeguro.TabIndex = 50;
             // 
             // grpMensaje
@@ -1720,12 +1494,13 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.grpMensaje.Controls.Add(this.DtFechaRegistro);
             this.grpMensaje.Controls.Add(this.label16);
             this.grpMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpMensaje.Location = new System.Drawing.Point(6, 16);
+            this.grpMensaje.Location = new System.Drawing.Point(6, 9);
             this.grpMensaje.Name = "grpMensaje";
-            this.grpMensaje.Size = new System.Drawing.Size(513, 110);
+            this.grpMensaje.Size = new System.Drawing.Size(551, 110);
             this.grpMensaje.TabIndex = 59;
             this.grpMensaje.TabStop = false;
             this.grpMensaje.Text = "Orden de Atención:";
+            this.grpMensaje.Enter += new System.EventHandler(this.grpMensaje_Enter);
             // 
             // ChkDerivado
             // 
@@ -1743,7 +1518,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Gray;
-            this.label19.Location = new System.Drawing.Point(255, 22);
+            this.label19.Location = new System.Drawing.Point(325, 22);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(91, 13);
             this.label19.TabIndex = 47;
@@ -1751,13 +1526,12 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             // CboTipoAtencion
             // 
-            this.CboTipoAtencion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CboTipoAtencion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboTipoAtencion.ForeColor = System.Drawing.Color.Black;
             this.CboTipoAtencion.FormattingEnabled = true;
-            this.CboTipoAtencion.Location = new System.Drawing.Point(258, 38);
+            this.CboTipoAtencion.Location = new System.Drawing.Point(328, 38);
             this.CboTipoAtencion.Name = "CboTipoAtencion";
-            this.CboTipoAtencion.Size = new System.Drawing.Size(241, 21);
+            this.CboTipoAtencion.Size = new System.Drawing.Size(211, 21);
             this.CboTipoAtencion.TabIndex = 46;
             // 
             // label18
@@ -1774,14 +1548,14 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // CboTipoPaciente
             // 
             this.CboTipoPaciente.BackColor = System.Drawing.SystemColors.Window;
-            this.CboTipoPaciente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CboTipoPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboTipoPaciente.ForeColor = System.Drawing.Color.Black;
             this.CboTipoPaciente.FormattingEnabled = true;
             this.CboTipoPaciente.Location = new System.Drawing.Point(19, 38);
             this.CboTipoPaciente.Name = "CboTipoPaciente";
-            this.CboTipoPaciente.Size = new System.Drawing.Size(233, 21);
+            this.CboTipoPaciente.Size = new System.Drawing.Size(303, 21);
             this.CboTipoPaciente.TabIndex = 44;
+            this.CboTipoPaciente.SelectedIndexChanged += new System.EventHandler(this.CboTipoPaciente_SelectedIndexChanged);
             // 
             // TxtHoraRegistro
             // 
@@ -1830,7 +1604,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.groupBox4.Controls.Add(this.label27);
             this.groupBox4.Controls.Add(this.CboMedico);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(525, 172);
+            this.groupBox4.Location = new System.Drawing.Point(563, 145);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(382, 117);
             this.groupBox4.TabIndex = 60;
@@ -1850,7 +1624,6 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             // CboEspecialidad
             // 
-            this.CboEspecialidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CboEspecialidad.Enabled = false;
             this.CboEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboEspecialidad.ForeColor = System.Drawing.Color.Black;
@@ -1873,7 +1646,6 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             // CboMedico
             // 
-            this.CboMedico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CboMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboMedico.ForeColor = System.Drawing.Color.Black;
             this.CboMedico.FormattingEnabled = true;
@@ -1881,13 +1653,225 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.CboMedico.Name = "CboMedico";
             this.CboMedico.Size = new System.Drawing.Size(351, 21);
             this.CboMedico.TabIndex = 56;
+            this.CboMedico.SelectionChangeCommitted += new System.EventHandler(this.CboMedico_SelectionChangeCommitted);
+            this.CboMedico.SelectedValueChanged += new System.EventHandler(this.CboMedico_SelectedValueChanged);
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.label53);
+            this.groupBox7.Controls.Add(this.CboTipoHospitalizacion);
+            this.groupBox7.Controls.Add(this.label48);
+            this.groupBox7.Controls.Add(this.label40);
+            this.groupBox7.Controls.Add(this.CboHabitacionAlta);
+            this.groupBox7.Controls.Add(this.label39);
+            this.groupBox7.Controls.Add(this.TxtHoraAlta);
+            this.groupBox7.Controls.Add(this.DtFechaIngreso);
+            this.groupBox7.Controls.Add(this.label11);
+            this.groupBox7.Controls.Add(this.label33);
+            this.groupBox7.Controls.Add(this.CboMotivoAlta);
+            this.groupBox7.Controls.Add(this.TxtHoraIngreso);
+            this.groupBox7.Controls.Add(this.label30);
+            this.groupBox7.Controls.Add(this.DtFechaAlta);
+            this.groupBox7.Controls.Add(this.label31);
+            this.groupBox7.Controls.Add(this.CboHabitacionIngreso);
+            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox7.Location = new System.Drawing.Point(563, 265);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(382, 198);
+            this.groupBox7.TabIndex = 64;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "En el caso sea una atención Hospitalaria";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.ForeColor = System.Drawing.Color.Gray;
+            this.label53.Location = new System.Drawing.Point(15, 27);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(105, 13);
+            this.label53.TabIndex = 78;
+            this.label53.Text = "Tipo Hospitalización:";
+            // 
+            // CboTipoHospitalizacion
+            // 
+            this.CboTipoHospitalizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CboTipoHospitalizacion.ForeColor = System.Drawing.Color.Black;
+            this.CboTipoHospitalizacion.FormattingEnabled = true;
+            this.CboTipoHospitalizacion.Location = new System.Drawing.Point(18, 43);
+            this.CboTipoHospitalizacion.Name = "CboTipoHospitalizacion";
+            this.CboTipoHospitalizacion.Size = new System.Drawing.Size(351, 21);
+            this.CboTipoHospitalizacion.TabIndex = 77;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.ForeColor = System.Drawing.Color.Gray;
+            this.label48.Location = new System.Drawing.Point(122, 109);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(33, 13);
+            this.label48.TabIndex = 76;
+            this.label48.Text = "Hora:";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.Color.Gray;
+            this.label40.Location = new System.Drawing.Point(197, 109);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(101, 13);
+            this.label40.TabIndex = 75;
+            this.label40.Text = "Número Habitación:";
+            // 
+            // CboHabitacionAlta
+            // 
+            this.CboHabitacionAlta.Enabled = false;
+            this.CboHabitacionAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CboHabitacionAlta.ForeColor = System.Drawing.Color.Black;
+            this.CboHabitacionAlta.FormattingEnabled = true;
+            this.CboHabitacionAlta.Location = new System.Drawing.Point(200, 125);
+            this.CboHabitacionAlta.Name = "CboHabitacionAlta";
+            this.CboHabitacionAlta.Size = new System.Drawing.Size(169, 21);
+            this.CboHabitacionAlta.TabIndex = 74;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.Gray;
+            this.label39.Location = new System.Drawing.Point(197, 68);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(101, 13);
+            this.label39.TabIndex = 73;
+            this.label39.Text = "Número Habitación:";
+            // 
+            // TxtHoraAlta
+            // 
+            this.TxtHoraAlta.Enabled = false;
+            this.TxtHoraAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtHoraAlta.ForeColor = System.Drawing.Color.Black;
+            this.TxtHoraAlta.Location = new System.Drawing.Point(125, 125);
+            this.TxtHoraAlta.Name = "TxtHoraAlta";
+            this.TxtHoraAlta.Size = new System.Drawing.Size(71, 20);
+            this.TxtHoraAlta.TabIndex = 72;
+            // 
+            // DtFechaIngreso
+            // 
+            this.DtFechaIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DtFechaIngreso.Location = new System.Drawing.Point(18, 84);
+            this.DtFechaIngreso.Name = "DtFechaIngreso";
+            this.DtFechaIngreso.Size = new System.Drawing.Size(103, 20);
+            this.DtFechaIngreso.TabIndex = 71;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Gray;
+            this.label11.Location = new System.Drawing.Point(13, 68);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(93, 13);
+            this.label11.TabIndex = 70;
+            this.label11.Text = "Fecha de Ingreso:";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.Gray;
+            this.label33.Location = new System.Drawing.Point(15, 150);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(78, 13);
+            this.label33.TabIndex = 69;
+            this.label33.Text = "Motivo de Alta:";
+            // 
+            // CboMotivoAlta
+            // 
+            this.CboMotivoAlta.Enabled = false;
+            this.CboMotivoAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CboMotivoAlta.ForeColor = System.Drawing.Color.Black;
+            this.CboMotivoAlta.FormattingEnabled = true;
+            this.CboMotivoAlta.Location = new System.Drawing.Point(18, 166);
+            this.CboMotivoAlta.Name = "CboMotivoAlta";
+            this.CboMotivoAlta.Size = new System.Drawing.Size(351, 21);
+            this.CboMotivoAlta.TabIndex = 68;
+            // 
+            // TxtHoraIngreso
+            // 
+            this.TxtHoraIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtHoraIngreso.ForeColor = System.Drawing.Color.Black;
+            this.TxtHoraIngreso.Location = new System.Drawing.Point(125, 84);
+            this.TxtHoraIngreso.Name = "TxtHoraIngreso";
+            this.TxtHoraIngreso.Size = new System.Drawing.Size(71, 20);
+            this.TxtHoraIngreso.TabIndex = 67;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.Gray;
+            this.label30.Location = new System.Drawing.Point(122, 68);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(33, 13);
+            this.label30.TabIndex = 66;
+            this.label30.Text = "Hora:";
+            // 
+            // DtFechaAlta
+            // 
+            this.DtFechaAlta.Enabled = false;
+            this.DtFechaAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtFechaAlta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DtFechaAlta.Location = new System.Drawing.Point(18, 125);
+            this.DtFechaAlta.Name = "DtFechaAlta";
+            this.DtFechaAlta.Size = new System.Drawing.Size(103, 20);
+            this.DtFechaAlta.TabIndex = 65;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.Gray;
+            this.label31.Location = new System.Drawing.Point(13, 109);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(76, 13);
+            this.label31.TabIndex = 64;
+            this.label31.Text = "Fecha de Alta:";
+            // 
+            // CboHabitacionIngreso
+            // 
+            this.CboHabitacionIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CboHabitacionIngreso.ForeColor = System.Drawing.Color.Black;
+            this.CboHabitacionIngreso.FormattingEnabled = true;
+            this.CboHabitacionIngreso.Location = new System.Drawing.Point(200, 84);
+            this.CboHabitacionIngreso.Name = "CboHabitacionIngreso";
+            this.CboHabitacionIngreso.Size = new System.Drawing.Size(169, 21);
+            this.CboHabitacionIngreso.TabIndex = 61;
+            // 
+            // BtnSiteds
+            // 
+            this.BtnSiteds.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSiteds.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BtnSiteds.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSiteds.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSiteds.Image = ((System.Drawing.Image)(resources.GetObject("BtnSiteds.Image")));
+            this.BtnSiteds.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnSiteds.Location = new System.Drawing.Point(6, 657);
+            this.BtnSiteds.Name = "BtnSiteds";
+            this.BtnSiteds.Size = new System.Drawing.Size(201, 27);
+            this.BtnSiteds.TabIndex = 34;
+            this.BtnSiteds.Text = "   Integración SITEDS SUSALUD";
+            this.BtnSiteds.UseVisualStyleBackColor = true;
+            this.BtnSiteds.Click += new System.EventHandler(this.btnSiteds_Click);
             // 
             // tabPage1
             // 
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(914, 691);
+            this.tabPage1.Size = new System.Drawing.Size(954, 691);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "(E-2) Datos Adicionales";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1897,7 +1881,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(914, 691);
+            this.tabPage3.Size = new System.Drawing.Size(954, 691);
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "(E-2) Ver Gastos";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1910,7 +1894,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 731);
+            this.ClientSize = new System.Drawing.Size(1218, 731);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -1924,21 +1908,18 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.gbMensjaje.ResumeLayout(false);
+            this.gbMensjaje.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
             this.GrpConsultorio.ResumeLayout(false);
             this.GrpConsultorio.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            this.gbMensjaje.ResumeLayout(false);
-            this.gbMensjaje.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
             this.GrpDiagnostico.ResumeLayout(false);
             this.GrpDiagnostico.PerformLayout();
             this.GrpDatosEconomicos.ResumeLayout(false);
@@ -1947,6 +1928,8 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.grpMensaje.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errValidator)).EndInit();
             this.ResumeLayout(false);
 
@@ -1984,7 +1967,6 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.ComboBox CboHabitacionIngreso;
-        private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Button BtnSiteds;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label28;
@@ -2028,7 +2010,6 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
         private System.Windows.Forms.DateTimePicker DtFechaAlta;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Button BtnFacturar;
-        private System.Windows.Forms.Button BtnHojaRuta;
         private System.Windows.Forms.TextBox TxtCoaseguroFarmacia;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.TextBox TxtCoaseguro;
@@ -2088,7 +2069,6 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
         private System.Windows.Forms.CheckBox ChkDerivado;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Label label57;
         private System.Windows.Forms.PictureBox pctFoto;
         private System.Windows.Forms.GroupBox gbMensjaje;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -2096,7 +2076,9 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
         private System.Windows.Forms.TextBox txtDiagnostico;
         private System.Windows.Forms.TextBox txtIdDiagnostico;
         private System.Windows.Forms.ErrorProvider errValidator;
-        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label35;
     }
 }

@@ -76,6 +76,9 @@ namespace Romsoft.GESTIONCLINICA.DTO.TABLAS.ADM_ATENCION
         //Request
         public DateTime d_fecha_registro_1 { get; set; }
         public DateTime d_fecha_registro_2 { get; set; }
+        public DateTime d_fecha_hospitalizacion { get; set; }
+        public string c_hora_hospitalizacion { get; set; }
+        public int id_habitacion { get; set; }
         //Response
         public string tipo_paciente { get; set; }
         public string tipo_atencion { get; set; }

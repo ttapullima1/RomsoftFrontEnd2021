@@ -87,8 +87,14 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
 
         private void button6_Click(object sender, EventArgs e)
         {
+            //Para consulta en Prefacturación
+            ComunFilter.f_tipo_pendiente = "C";
+            ComunFilter.f_tipo_facturacion = "P";
+            ComunFilter.f_idioma = "E";
 
-            frmPrefacturacion frm = new frmPrefacturacion();
+            ComunFilter.f_idAtencion = Convert.ToInt32(LblCuentaCorriente.Text);
+
+        frmPrefacturacion frm = new frmPrefacturacion();
 
             if (frm.ShowDialog() == DialogResult.OK)
             {
@@ -126,11 +132,6 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
                 Task oTask = new Task(CargaCombos);
                 oTask.Start();
                 await oTask;
-
-                //Muestra formulario loading
-                //waitForm.Show(this);
-
-                //waitForm.Close();
                 gbMensjaje.Visible = false;
                 //
 
@@ -169,10 +170,29 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             }
             else
             {
+                
+
                 this.estadoActual = EstadoActual.Editar;
                 //btnNuevo.Visible = true;
-                //Consulta por ID
-                //GetDatosAtencion();
+
+                // Carga Combos async
+                CheckForIllegalCrossThreadCalls = false;
+                Task oTask = new Task(CargaCombos);
+                oTask.Start();
+                await oTask;
+                gbMensjaje.Visible = false;
+                //
+
+                //Consulta por ID atención
+                LblCuentaCorriente.Text = Convert.ToString(ComunFilter.f_idAtencion.ToString());
+
+                GetDatosAtencion(ComunFilter.f_idAtencion);
+
+                if (Convert.ToDecimal(TxtCopago.Text) >= 1)
+                {
+                    BtnFacturar.Enabled = true;
+                }
+
             }
 
         }
@@ -200,7 +220,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             CargarComboTipoCIE10();
             //CargarComboCIE10();  //carga en el filtro
             CargarComboMedicoTratante();
-            CargarComboEspecialidad();
+            //CargarComboEspecialidad();
             CargarComboTipoHospitalizacion();
             CargarComboHabitacionIngresoAlta();
             CargarComboMotivoAlta();
@@ -210,24 +230,24 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
 
         }
 
-        //muestra formulario loading
-        public void Show()
-        {
+        ////muestra formulario loading
+        //public void Show()
+        //{
 
-            waitForm.Show(this);
-            //loading = new Loading();
-            //loading.Show();
+        //    waitForm.Show(this);
+        //    //loading = new Loading();
+        //    //loading.Show();
 
-        }
+        //}
 
-        //cierre formulario loading
-        public void Hide()
-        {
-            //if (loading != null)
-            //    loading.Close();
-            waitForm.Close();
+        ////cierre formulario loading
+        //public void Hide()
+        //{
+        //    //if (loading != null)
+        //    //    loading.Close();
+        //    waitForm.Close();
 
-        }
+        //}
 
         //Obtiene datos por el ID Paciente
         private void GetDatosPaciente(int intTipoConsulta)
@@ -251,8 +271,8 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
                     {
 
                         LblPaciente.Text = (string.IsNullOrEmpty(pacienteListDTO[i].t_apellido_paterno) ? string.Empty : pacienteListDTO[i].t_apellido_paterno.ToString()) + " " + (string.IsNullOrEmpty(pacienteListDTO[i].t_apellido_materno) ? string.Empty : pacienteListDTO[i].t_apellido_materno.ToString()) + " " + (string.IsNullOrEmpty(pacienteListDTO[i].t_nombres) ? string.Empty : pacienteListDTO[i].t_nombres.ToString());
-                        LblUbigeoNacimiento.Text = pacienteListDTO[i].des_ubigeo_nacimiento.ToString();
-                        LblUbigeoDireccion.Text = pacienteListDTO[i].des_ubigeo_domicilio.ToString();
+                        LblUbigeoNacimiento.Text = string.IsNullOrEmpty(pacienteListDTO[i].des_ubigeo_nacimiento) ? string.Empty : pacienteListDTO[i].des_ubigeo_nacimiento.ToString();
+                        LblUbigeoDireccion.Text = string.IsNullOrEmpty(pacienteListDTO[i].des_ubigeo_domicilio) ? string.Empty : pacienteListDTO[i].des_ubigeo_domicilio.ToString();
                         LblFechaNacimiento.Text = pacienteListDTO[i].d_fecha_nacimiento.ToString("dd/MM/yyyy");
                         int edad = ValidationManager.CalcularEdad(Convert.ToDateTime(LblFechaNacimiento.Text), DateTime.Now);
                         LblEdad.Text = edad.ToString();
@@ -655,12 +675,12 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             }
         }
 
-        private void CargarComboEspecialidad()
+        private void CargarComboEspecialidad(int Id_Profesional)
         {
             try
             {
                 var jsonResponse = new JsonResponse { Success = false };
-                jsonResponse = InvokeHelper.MakeRequest(ConstantesWindows.WS_ADM_ESPECIALIDAD_GetAllActives, new DTO.TABLAS.ADM_ESPECIALIDAD.ADM_ESPECIALIDADDTO { }, ConstantesWindows.METHODPOST);
+                jsonResponse = InvokeHelper.MakeRequest(ConstantesWindows.WS_ADM_ESPECIALIDAD_GetAllActives, new DTO.TABLAS.ADM_ESPECIALIDAD.ADM_ESPECIALIDADPROFESIONALDTO { id_profesional= Convert.ToInt32(CboMedico.SelectedValue) }, ConstantesWindows.METHODPOST);
 
                 if (jsonResponse.Success && !jsonResponse.Warning)
                 {
@@ -668,7 +688,33 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
                     CboEspecialidad.ValueMember = "id_especialidad";
                     CboEspecialidad.DisplayMember = "t_descripcion";
                     CboEspecialidad.DataSource = especialidadlListDTO;
-                    CboEspecialidad.SelectedIndex = -1;
+                    //CboEspecialidad.SelectedIndex = -1;
+                }
+                else if (jsonResponse.Warning)
+                {
+                    Mensaje.ShowMessageAlert(this.ParentForm, ConstantesWindows.TituloMensaje, jsonResponse.Message);
+                }
+            }
+            catch (Exception ex)
+            {
+                Mensaje.ShowMessageAlert(this.ParentForm, ConstantesWindows.TituloMensaje, ex.Message);
+            }
+        }
+
+        private void CargarComboEspecialidadProfesionalId(int Id_Profesional)
+        {
+            try
+            {
+                var jsonResponse = new JsonResponse { Success = false };
+                jsonResponse = InvokeHelper.MakeRequest(ConstantesWindows.WS_ADM_ESPECIALIDA_PROFESIONAL_GetById, new DTO.TABLAS.ADM_ESPECIALIDAD.ADM_ESPECIALIDADDTO { }, ConstantesWindows.METHODPOST);
+
+                if (jsonResponse.Success && !jsonResponse.Warning)
+                {
+                    var especialidadlListDTO = (List<DTO.TABLAS.ADM_ESPECIALIDAD.ADM_ESPECIALIDADDTO>)JsonConvert.DeserializeObject(jsonResponse.Data.ToString(), (new List<DTO.TABLAS.ADM_ESPECIALIDAD.ADM_ESPECIALIDADDTO>()).GetType());
+                    CboEspecialidad.ValueMember = "id_especialidad";
+                    CboEspecialidad.DisplayMember = "t_descripcion";
+                    CboEspecialidad.DataSource = especialidadlListDTO;
+                    //CboEspecialidad.SelectedIndex = -1;
                 }
                 else if (jsonResponse.Warning)
                 {
@@ -717,16 +763,16 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
                 if (jsonResponse.Success && !jsonResponse.Warning)
                 {
                     var especialidadlListDTO = (List<DTO.TABLAS.ADM_HABITACION.ADM_HABITACIONDTO>)JsonConvert.DeserializeObject(jsonResponse.Data.ToString(), (new List<DTO.TABLAS.ADM_HABITACION.ADM_HABITACIONDTO>()).GetType());
-                    CboHabitacionIngreso.ValueMember = "id_tipo_hospitalizacion";
+                    CboHabitacionIngreso.ValueMember = "id_habitacion";
                     CboHabitacionIngreso.DisplayMember = "t_descripcion";
                     CboHabitacionIngreso.DataSource = especialidadlListDTO;
                     CboHabitacionIngreso.SelectedIndex = -1;
 
                     //
-                    CboHabitacionAlta.ValueMember = "id_tipo_hospitalizacion";
-                    CboHabitacionAlta.DisplayMember = "t_descripcion";
-                    CboHabitacionAlta.DataSource = especialidadlListDTO;
-                    CboHabitacionAlta.SelectedIndex = -1;
+                    //CboHabitacionAlta.ValueMember = "id_tipo_hospitalizacion";
+                    //CboHabitacionAlta.DisplayMember = "t_descripcion";
+                    //CboHabitacionAlta.DataSource = especialidadlListDTO;
+                    //CboHabitacionAlta.SelectedIndex = -1;
 
                 }
                 else if (jsonResponse.Warning)
@@ -928,29 +974,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
                 this.errValidator.SetError(this.CboCategoriaPago, string.Empty);
             }
 
-            //if (string.IsNullOrEmpty(this.TxtCodigoAsegurado.Text))
-            //{
-            //   this.errValidator.SetError(this.TxtCodigoAsegurado, "Ingrese código asegurado.");
-            //    result = false;
-            //}
-            //else
-            //{
-            //this.errValidator.SetError(this.TxtCodigoAsegurado, string.Empty);
-            //}
-
-            //if (string.IsNullOrEmpty(this.TxtContrato.Text))
-            //{
-            //this.errValidator.SetError(this.TxtContrato, "Ingrese Nro. contrato.");
-            //result = false;
-            //}
-            //else
-            //{
-            //this.errValidator.SetError(this.TxtContrato, string.Empty);
-            //}
-
-
-
-            if (string.IsNullOrEmpty(this.CboBeneficio.Text))
+                       if (string.IsNullOrEmpty(this.CboBeneficio.Text))
             {
                 this.errValidator.SetError(this.CboBeneficio, "Seleccione beneficio");
                 result = false;
@@ -960,75 +984,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
                 this.errValidator.SetError(this.CboBeneficio, string.Empty);
             }
 
-            //if (string.IsNullOrEmpty(this.CboTipoDocAutorizador1.Text))
-            //{
-            //    this.errValidator.SetError(this.CboTipoDocAutorizador1, "Seleccione documento autorizador");
-            //    result = false;
-            //}
-            //else
-            //{
-            //    this.errValidator.SetError(this.CboTipoDocAutorizador1, string.Empty);
-            //}
-
-            //if (string.IsNullOrEmpty(this.TxtDocumentoAutorizador1.Text))
-            //{
-            //    this.errValidator.SetError(this.TxtDocumentoAutorizador1, "Ingresar Nro. Autorización");
-            //    result = false;
-            //}
-            //else
-            //{
-            //    this.errValidator.SetError(this.TxtDocumentoAutorizador1, string.Empty);
-            //}
-
-            //if (string.IsNullOrEmpty(this.CboTipoFiliacion.Text))
-            //{
-            //    this.errValidator.SetError(this.CboTipoFiliacion, "Seleccione filiación");
-            //    result = false;
-            //}
-            //else
-            //{
-            //    this.errValidator.SetError(this.CboTipoFiliacion, string.Empty);
-            //}
-
-            //if (string.IsNullOrEmpty(this.TxtNombreTitular.Text))
-            //{
-            //    this.errValidator.SetError(this.TxtNombreTitular, "Ingrese datos del titular");
-            //    result = false;
-            //}
-            //else
-            //{
-            //    this.errValidator.SetError(this.TxtNombreTitular, string.Empty);
-            //}
-
-            //if (string.IsNullOrEmpty(this.CboTipoAfiliacion.Text))
-            //{
-            //    this.errValidator.SetError(this.CboTipoAfiliacion, "Seleccione afiliación");
-            //    result = false;
-            //}
-            //else
-            //{
-            //    this.errValidator.SetError(this.CboTipoAfiliacion, string.Empty);
-            //}
-
-            //if (string.IsNullOrEmpty(this.CboMoneda.Text))
-            //{
-            //    this.errValidator.SetError(this.CboMoneda, "Seleccione afiliación");
-            //    result = false;
-            //}
-            //else
-            //{
-            //    this.errValidator.SetError(this.CboMoneda, string.Empty);
-            //}
-
-            //if (string.IsNullOrEmpty(this.CboProductoPlan.Text))
-            //{
-            //    this.errValidator.SetError(this.CboProductoPlan, "Seleccione producto plan");
-            //    result = false;
-            //}
-            //else
-            //{
-            //    this.errValidator.SetError(this.CboProductoPlan, string.Empty);
-            //}
+           
 
             if (string.IsNullOrEmpty(this.CboMedico.Text))
             {
@@ -1104,7 +1060,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
                         jsonResponse = InvokeHelper.MakeRequest(ConstantesWindows.WS_ADM_ATENCION_Add, GetAtencion(), ConstantesWindows.METHODPOST);
                         break;
                     case EstadoActual.Editar:
-                        //jsonResponse = InvokeHelper.MakeRequest(ConstantesWindows.WS_ADM_ATENCION_Update, GetAtencion(), ConstantesWindows.METHODPOST);
+                        jsonResponse = InvokeHelper.MakeRequest(ConstantesWindows.WS_ADM_ATENCION_Update, GetAtencion(), ConstantesWindows.METHODPOST);
                         break;
                     case EstadoActual.Eliminar:
                         //jsonResponse = InvokeHelper.MakeRequest(ConstantesWindows.WS_ADM_ATENCION_Delete, new ADM_PACIENTEDTO { id_plan_seguro = Convert.ToInt32(this.txtplanSegus.Text), UsuarioCreacion = WindowsSession.UsuarioActual }, ConstantesWindows.METHODPOST);
@@ -1132,8 +1088,15 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
                 if (result)
                 {
                     //this.Close();
+                    LblCuentaCorriente.Text = jsonResponse.Data.ToString();
                     Mensaje.ShowMessageAlert(this.ParentForm, ConstantesWindows.TituloMensaje, jsonResponse.Message);
-                    DialogResult = DialogResult.OK;
+                    BtnFacturar.Enabled = true;
+                    //Cierra formulario si el copago = 0
+                    if(Convert.ToDecimal(TxtCopago.Text) <=0)
+                    {
+                        DialogResult = DialogResult.OK;
+                    }
+                    
                 }
             }
             catch (Exception ex)
@@ -1148,6 +1111,8 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
         {
                 return new ADM_ATENCIONDTO
                 {
+                    //Solo para actualizar
+                    id_atencion = ComunFilter.f_idAtencion,
                     id_paciente = ComunFilter.f_id_paciente,
                     id_tipo_paciente = Convert.ToInt32(CboTipoPaciente.SelectedValue),
                     id_tipo_atencion = Convert.ToInt32(CboTipoAtencion.SelectedValue),
@@ -1204,7 +1169,10 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
                     id_usuarioCreacion = WindowsSession.UserIdActual,
                     id_usuarioModifica = WindowsSession.UserIdActual,
                     FechaCreacion = DateTime.Now,
-                    FechaModificacion = DateTime.Now
+                    FechaModificacion = DateTime.Now,
+                    d_fecha_hospitalizacion = DtFechaIngreso.Value,
+                    c_hora_hospitalizacion = TxtHoraIngreso.Text,
+                    id_habitacion = Convert.ToInt32(CboHabitacionIngreso.SelectedValue)
                 };
         }
 
@@ -1247,6 +1215,134 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             }
             
             return SiNo;
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void CboMedico_SelectedValueChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void CboMedico_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            CargarComboEspecialidad(Convert.ToInt32(CboMedico.SelectedValue));
+        }
+
+        //Obtiene datos por el ID Paciente
+        private void GetDatosAtencion(int idAtencion)
+        {
+
+           
+                var jsonResponse = new JsonResponse { Success = false };
+
+                //Consulta Cabecera//
+                jsonResponse = InvokeHelper.MakeRequest(ConstantesWindows.WS_ADM_ATENCION_GetById, new DTO.TABLAS.ADM_ATENCION.ADM_ATENCION_RequestDTO {IdAtencion = idAtencion }, ConstantesWindows.METHODPOST);
+
+                if (jsonResponse.Success && !jsonResponse.Warning)
+                {
+                    var atencionListDTO = (List<ADM_ATENCIONDTO>)JsonConvert.DeserializeObject(jsonResponse.Data.ToString(), (new List<ADM_ATENCIONDTO>()).GetType());
+                    //this.ETUsuariobindingSource.DataSource = usuarioListDTO;
+                    //--------------------------
+
+                    for (int i = 0; i < atencionListDTO.Count; i++)
+                    {
+
+                        CboTipoPaciente.SelectedValue = Convert.ToInt32(atencionListDTO[i].id_tipo_paciente.ToString());
+                        CboTipoAtencion.SelectedValue = Convert.ToInt32(atencionListDTO[i].id_tipo_atencion.ToString());
+                        DtFechaRegistro.Text = atencionListDTO[i].d_fecha_registro.ToString("dd/MM/yyyy");
+                        TxtHoraRegistro.Text = string.IsNullOrEmpty(atencionListDTO[i].c_hora_registro) ? string.Empty : atencionListDTO[i].c_hora_registro.ToString();
+                        //CboConsultorio.SelectedValue = Convert.ToInt32(atencionListDTO[i].id.ToString());
+                        //DtAtencion.Text = atencionListDTO[i].d.ToString("dd/MM/yyyy");
+                        //TxtHoraAtencion.Text=""
+                        //DtFechaVigencia.Text=""
+                        CboPlanSeguro.SelectedValue = Convert.ToInt32(atencionListDTO[i].id_plan_seguro.ToString());
+                        CboCategoriaPago.SelectedValue = Convert.ToInt32(atencionListDTO[i].id_categoria_pago.ToString());
+                        TxtCodigoAsegurado.Text = string.IsNullOrEmpty(atencionListDTO[i].c_codigo_asegurado) ? string.Empty : atencionListDTO[i].c_codigo_asegurado.ToString();
+                        TxtContrato.Text = string.IsNullOrEmpty(atencionListDTO[i].c_contrato) ? string.Empty : atencionListDTO[i].c_contrato.ToString();
+                        CboBeneficio.SelectedValue = Convert.ToInt32(atencionListDTO[i].id_beneficio.ToString());
+                        CboTipoDocAutorizador1.SelectedValue = Convert.ToInt32(atencionListDTO[i].id_documento_prestacion1.ToString());
+                        TxtDocumentoAutorizador1.Text = string.IsNullOrEmpty(atencionListDTO[i].c_documento_prestacion1) ? string.Empty : atencionListDTO[i].c_documento_prestacion1.ToString();
+                        DtFechaAutorizacion1.Text = atencionListDTO[i].d_fecha_autorizacion1.ToString("dd/MM/yyyy");
+                        CboTipoDocAutorizador2.SelectedValue = Convert.ToInt32(atencionListDTO[i].id_documento_prestacion2.ToString());
+                        TxtDocumentoAutorizador2.Text = string.IsNullOrEmpty(atencionListDTO[i].c_documento_prestacion2) ? string.Empty : atencionListDTO[i].c_documento_prestacion2.ToString();
+                        DtFechaAutorizacion2.Text = atencionListDTO[i].d_fecha_autorizacion2.ToString("dd/MM/yyyy");
+                        CboTipoFiliacion.SelectedValue = Convert.ToInt32(atencionListDTO[i].id_tipo_filiacion.ToString());
+                        TxtNombreTitular.Text = string.IsNullOrEmpty(atencionListDTO[i].t_nombre_titular) ? string.Empty : atencionListDTO[i].t_nombre_titular.ToString();
+                        CboTipoAfiliacion.SelectedValue = Convert.ToInt32(atencionListDTO[i].id_tipo_afiliacion.ToString());
+                        CboMoneda.SelectedValue = Convert.ToInt32(atencionListDTO[i].id_moneda.ToString());
+                        TxtCopago.Text = (atencionListDTO[i].n_copago_fijo.ToString());
+                        TxtCoaseguro.Text = (atencionListDTO[i].n_copago_variable.ToString());
+                        TxtCoaseguroFarmacia.Text = (atencionListDTO[i].n_copago_variable_far.ToString());
+                        CboProductoPlan.SelectedValue = Convert.ToInt32(atencionListDTO[i].id_producto_plan.ToString());
+                        TxtLimiteCobertura.Text = atencionListDTO[i].n_limite_cobertura.ToString();
+                        CboTipoDiagnostico.SelectedValue = Convert.ToInt32(atencionListDTO[i].id_tipo_diagnostico.ToString());
+                        txtIdDiagnostico.Text = atencionListDTO[i].id_tipo_diagnostico.ToString();
+                        txtDiagnostico.Text = CboTipoDiagnostico.Text;
+                        //TxtNumeroPlaca.Text = "";
+                        //TxtObservacionAccidente.Text = "";
+                        CboMedico.SelectedValue = Convert.ToInt32(atencionListDTO[i].id_profesional.ToString());
+                        CboTipoHospitalizacion.SelectedValue = Convert.ToInt32(atencionListDTO[i].id_hospitalizacion.ToString());
+                       //DtFechaIngreso.Text = string.IsNullOrEmpty(atencionListDTO[i].d_fecha_ingreso) ? string.Empty : atencionListDTO[i].d_fecha_ingreso.ToString();
+                       TxtHoraIngreso.Text = string.IsNullOrEmpty(atencionListDTO[i].c_hora_ingreso) ? string.Empty : atencionListDTO[i].c_hora_ingreso.ToString();
+                        CboHabitacionIngreso.SelectedValue = Convert.ToInt32(atencionListDTO[i].id_habitacion.ToString());
+
+                    }
+                }
+                else if (jsonResponse.Warning)
+                {
+                    Mensaje.ShowMessageAlert(this.ParentForm, ConstantesWindows.TituloMensaje, jsonResponse.Message);
+                }
+
+        }
+
+        
+
+        private void grpMensaje_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CboTipoPaciente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                var jsonResponse = new JsonResponse { Success = false };
+                jsonResponse = InvokeHelper.MakeRequest(ConstantesWindows.WS_ADM_TIPO_PACIENTE_GetAllActives, new DTO.TABLAS.ADM_TIPO_PACIENTE.ADM_TIPO_PACIENTEDTO { }, ConstantesWindows.METHODPOST);
+
+                if (jsonResponse.Success && !jsonResponse.Warning)
+                {
+                    var tipopaListDTO = (List<DTO.TABLAS.ADM_TIPO_PACIENTE.ADM_TIPO_PACIENTEDTO>)JsonConvert.DeserializeObject(jsonResponse.Data.ToString(), (new List<DTO.TABLAS.ADM_TIPO_PACIENTE.ADM_TIPO_PACIENTEDTO>()).GetType());
+                    //CboTipoPaciente.ValueMember = "id_tipo_paciente";
+                    //CboTipoPaciente.DisplayMember = "t_descripcion";
+                    //CboTipoPaciente.DataSource = tipopaListDTO;
+                    //CboTipoPaciente.SelectedIndex = -1;
+
+                    foreach (var line in tipopaListDTO)
+                    {
+                        if(CboTipoPaciente.Text == line.t_descripcion.ToString())
+                        {
+                            TxtCoaseguroFarmacia.Text = line.n_copago_variable_far.ToString();
+                            TxtCoaseguro.Text = line.n_copago_variable.ToString();
+                            CboMoneda.SelectedValue = line.id_moneda;
+                        }
+
+                    }
+
+
+                }
+                else if (jsonResponse.Warning)
+                {
+                    Mensaje.ShowMessageAlert(this.ParentForm, ConstantesWindows.TituloMensaje, jsonResponse.Message);
+                }
+            }
+            catch (Exception ex)
+            {
+                Mensaje.ShowMessageAlert(this.ParentForm, ConstantesWindows.TituloMensaje, ex.Message);
+            }
         }
     }
 }
